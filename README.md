@@ -1,5 +1,7 @@
 # Wagenbreth–Blanke Equation — Ethanol-Water Mixture Density
 
+**Repository:** https://github.com/ququqem/wagenbreth-blanke-oiml-r22
+
 Machine-readable coefficients and reference documentation for the
 Wagenbreth–Blanke polynomial, as published in
 **OIML International Recommendation R 22 (1975)**,
