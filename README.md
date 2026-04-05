@@ -212,3 +212,4 @@ restriction.
 If you find an error in any coefficient, please open an issue with a reference
 to the specific value in OIML R 22 (1975). Precision matters — please supply
 the full value from the source document, not a rounded approximation.
+
