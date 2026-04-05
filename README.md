@@ -180,6 +180,16 @@ This equation is implicit in `p` — Newton–Raphson iteration is required.
 
 ---
 
+## Relationship to the official OIML tables
+
+The Wagenbreth–Blanke polynomial and the coefficients in this repository are a computational tool. For legal metrology purposes — including trade, taxation, customs, and instrument certification — the **official OIML R 22 alcoholometric tables** are the authoritative and legally binding reference, not the polynomial.
+
+Results computed directly from the polynomial may differ from the official table values by small amounts due to the rounding conventions used in constructing the tables. In any legally regulated context, the OIML R 22 tables take precedence.
+
+This repository is intended for scientific, research, educational, and engineering purposes.
+
+---
+
 ## Sources
 
 - **OIML R 22 (1975)**: *International Alcoholometric Tables*.
