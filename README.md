@@ -75,8 +75,8 @@ coefficient, its units, and its physical interpretation.
 
 ### A coefficients (concentration terms at 20°C)
 
-| Index | Coefficient | Value |
-|-------|-------------|-------|
+| Coefficient | Power of p | Value (kg/m³) |
+|-------------|------------|---------------|
 | A₁  | p⁰  (constant) |  998.20123 |
 | A₂  | p¹             | −192.9769495 |
 | A₃  | p²             |  389.1238958 |
@@ -90,12 +90,10 @@ coefficient, its units, and its physical interpretation.
 | A₁₁ | p¹⁰            |  223446.0334 |
 | A₁₂ | p¹¹            | −39032.85426 |
 
-Units: kg/m³
-
 ### B coefficients (thermal expansion, pure water axis)
 
-| Index | Coefficient | Value |
-|-------|-------------|-------|
+| Coefficient | Power of (t−20) | Value |
+|-------------|-----------------|----------------------|
 | B₁ | (t−20)¹ | −0.20618513 |
 | B₂ | (t−20)² | −0.0052682542 |
 | B₃ | (t−20)³ |  3.6130013 × 10⁻⁵ |
@@ -103,7 +101,7 @@ Units: kg/m³
 | B₅ | (t−20)⁵ |  7.169354 × 10⁻⁹ |
 | B₆ | (t−20)⁶ | −9.9739231 × 10⁻¹¹ |
 
-Units: kg/(m³·°C^k)
+Units: kg/(m³·°C^n) where n is the power of (t−20) in that row.
 
 ### C coefficients (interaction terms)
 
@@ -143,7 +141,7 @@ A minimal Python implementation is provided in
 from wagenbreth_blanke import density_kg_m3
 
 rho = density_kg_m3(p=0.40, t=20.0)   # 40% ethanol by mass at 20°C
-print(f"{rho:.4f} kg/m³")             # → 935.2151 kg/m³
+print(f"{rho:.4f} kg/m³")             # → 935.1450 kg/m³
 ```
 
 ---
@@ -166,10 +164,10 @@ multiplications and avoids computing large integer powers explicitly.
 
 The equation uses **mass fraction** (`p`), not volume fraction (% v/v).
 
-To convert % v/v to mass fraction at temperature `t`:
+To convert % v/v to mass fraction (at reference temperature 20°C):
 
 ```
-p = (vv/100) · ρ_mixture(p, t) / ρ_pure_ethanol(t)
+p = (vv/100) · ρ_mixture(p, 20) / ρ_pure_ethanol(20)
 ```
 
 This equation is implicit in `p` — Newton–Raphson iteration is required.
