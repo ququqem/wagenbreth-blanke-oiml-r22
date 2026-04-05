@@ -1,5 +1,7 @@
 # Wagenbreth–Blanke Equation — Ethanol-Water Mixture Density
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19425655.svg)](https://doi.org/10.5281/zenodo.19425655)
+
 **Repository:** https://github.com/ququqem/wagenbreth-blanke-oiml-r22
 
 Machine-readable coefficients and reference documentation for the
@@ -212,4 +214,3 @@ restriction.
 If you find an error in any coefficient, please open an issue with a reference
 to the specific value in OIML R 22 (1975). Precision matters — please supply
 the full value from the source document, not a rounded approximation.
-
