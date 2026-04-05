@@ -1,6 +1,6 @@
 # Wagenbreth–Blanke Equation — Ethanol-Water Mixture Density
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19425655.svg)](https://doi.org/10.5281/zenodo.19425655)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19426888.svg)](https://doi.org/10.5281/zenodo.19426888)
 
 **Repository:** https://github.com/ququqem/wagenbreth-blanke-oiml-r22
 
